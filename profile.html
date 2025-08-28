@@ -1,7 +1,10 @@
 <html>
   <head>
-    <meta content="width=device-width, initial-scale=1.0" name="viewport" />
     <link rel="preconnect" href="https://fonts.gstatic.com/" crossorigin="" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no"
+    />
     <link
       rel="stylesheet"
       as="style"
@@ -41,10 +44,34 @@
             </svg>
           </div>
           <h2
-            class="text-[#111418] text-lg font-bold leading-tight tracking-[-0.015em] flex-1 text-center pr-12"
+            class="text-[#111418] text-lg font-bold leading-tight tracking-[-0.015em] flex-1 text-center"
           >
             Profile
           </h2>
+          <div class="flex w-12 items-center justify-end">
+            <button
+              class="flex max-w-[480px] cursor-pointer items-center justify-center overflow-hidden rounded-lg h-12 bg-transparent text-[#111418] gap-2 text-base font-bold leading-normal tracking-[0.015em] min-w-0 p-0"
+            >
+              <div
+                class="text-[#111418]"
+                data-icon="DotsThree"
+                data-size="24px"
+                data-weight="regular"
+              >
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  width="24px"
+                  height="24px"
+                  fill="currentColor"
+                  viewBox="0 0 256 256"
+                >
+                  <path
+                    d="M140,128a12,12,0,1,1-12-12A12,12,0,0,1,140,128Zm56-12a12,12,0,1,0,12,12A12,12,0,0,0,196,116ZM60,116a12,12,0,1,0,12,12A12,12,0,0,0,60,116Z"
+                  ></path>
+                </svg>
+              </div>
+            </button>
+          </div>
         </div>
         <div class="flex p-4 @container">
           <div class="flex w-full flex-col gap-4 items-center">
@@ -87,61 +114,115 @@
               </p>
             </div>
           </div>
+          <div
+            class="flex min-w-[111px] flex-1 basis-[fit-content] flex-col gap-2 rounded-lg border border-[#dbe0e6] p-3 items-center text-center"
+          >
+            <p
+              class="text-[#111418] tracking-light text-2xl font-bold leading-tight"
+            >
+              5
+            </p>
+            <div class="flex items-center gap-2">
+              <p class="text-[#60748a] text-sm font-normal leading-normal">
+                Blogs
+              </p>
+            </div>
+          </div>
         </div>
-        <h3
-          class="text-[#111418] text-lg font-bold leading-tight tracking-[-0.015em] px-4 pb-2 pt-4"
-        >
-          About
-        </h3>
-        <p
-          class="text-[#111418] text-base font-normal leading-normal pb-3 pt-1 px-4"
-        >
-          Food enthusiast and home cook. Sharing my favorite recipes and
-          culinary adventures.
-        </p>
-        <h3
-          class="text-[#111418] text-lg font-bold leading-tight tracking-[-0.015em] px-4 pb-2 pt-4"
-        >
-          Recipes
-        </h3>
+        <div class="pb-3">
+          <div class="flex border-b border-[#dbe0e6] px-4 gap-8">
+            <a
+              class="flex flex-col items-center justify-center border-b-[3px] border-b-[#111418] text-[#111418] pb-[13px] pt-4"
+              href="#"
+            >
+              <p
+                class="text-[#111418] text-sm font-bold leading-normal tracking-[0.015em]"
+              >
+                Recipes
+              </p>
+            </a>
+            <a
+              class="flex flex-col items-center justify-center border-b-[3px] border-b-transparent text-[#60748a] pb-[13px] pt-4"
+              href="#"
+            >
+              <p
+                class="text-[#60748a] text-sm font-bold leading-normal tracking-[0.015em]"
+              >
+                Blogs
+              </p>
+            </a>
+          </div>
+        </div>
         <div
           class="grid grid-cols-[repeat(auto-fit,minmax(158px,1fr))] gap-3 p-4"
         >
-          <div class="flex flex-col gap-3">
+          <div class="flex flex-col gap-3 pb-3">
             <div
               class="w-full bg-center bg-no-repeat aspect-square bg-cover rounded-lg"
               style="
-                background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuCkunR3zYxS2E3ss4sc1FVflG3B5s2H-hvxqIX6VCA2INdvnOmfaRuKmbMxNiVl4KE46ZfcOYsTqJHaglaTU77218J9Ndvwy8Iy6XF7-x_llUdDzLS9K-M7xBhK4cV0ak3xtKctYDj4oWZMtfdGyWmUynBNgNu1oB86HkrMuYc0b3lehQYOl6b339LUiPjUyLK3dcJNPTtWlUmBtih-Elm1MokHB9DGQQmCJQhzXxUbZx59DKRq2iK41qc2-5MrXcW5Q5lyNsovsUu-');
+                background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuAUeBX4G6MTogYjYXRMZSshpzreMik2YeMJpo90Bmh2EgRhb4CT3r1uO1f_daNWKO_47HK8jU5DjFTiRVj8GyK8RF3XEdpSMnx_P6GZ3NTDQie1AYnpg7-_2T-6VjOIemuKo2zjV0XZlCBlonNcQzxbY1XmnZU9FAJWQTjb394PWSglP_3VpqXwvUidCdD71vXpz23-q9Mh7FXtYWdn4-nPFDm_OsQsRSmyetab5kU0WVVNxG0n5-wr7GqC7uK601B7oDKd6XI9JAGo');
               "
             ></div>
+            <div>
+              <p class="text-[#111418] text-base font-medium leading-normal">
+                Delicious Pasta
+              </p>
+              <p class="text-[#60748a] text-sm font-normal leading-normal">
+                15 min
+              </p>
+            </div>
           </div>
-          <div class="flex flex-col gap-3">
+          <div class="flex flex-col gap-3 pb-3">
             <div
               class="w-full bg-center bg-no-repeat aspect-square bg-cover rounded-lg"
               style="
-                background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuAgd6nfb69x4YU0QV2Gtz9FXANLa3FJT93rd4vqq6j5LZsxml_sm0zgCUx_wBSTt9Y15BUNJ9SZy02lLG2euWZNiSaM0Z9cG007c4QN5yU5W1n0wIbNyQhio_mC2uzzX49MN6jTPM8K-x7ImYTNdDEOvM8udn7X3wphXWNtDWwXkk_7urLjw-sFdx7i-3JxEwHhzgAyX1thLWEUtG2OiPTzMJpO34l7arn8z1c1H5hxLxwcFEDQiIiIEsgvfQiUt01Uyqwfu0ib8bf1');
+                background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuALvOh7Hb48ldZGQmQmG60mGeObaPaEuh0supQ9s0KyHuf9-oV6HJK2oKUyFRhDsXWeutgz5fM7Jht5PFs9A54Oy-3c7IzP7AUlVLn4M4_Cv3-d3C0K6gmffLS9Uc6q1-Cw274y8vZjCIldo4VchmjIWD_GIEDgbJNdv1JIWrawT11yJs4KAaqtcivoBagsS_JA96e1i3d8uZGKAsTmJK2q9T6FauGgz9yM80rW_XP83kyC8y4fLGWFZ4l62ZFJy9Sb547qgEgE_UVz');
               "
             ></div>
+            <div>
+              <p class="text-[#111418] text-base font-medium leading-normal">
+                Summer Salad
+              </p>
+              <p class="text-[#60748a] text-sm font-normal leading-normal">
+                20 min
+              </p>
+            </div>
           </div>
-          <div class="flex flex-col gap-3">
+          <div class="flex flex-col gap-3 pb-3">
             <div
               class="w-full bg-center bg-no-repeat aspect-square bg-cover rounded-lg"
               style="
-                background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuC9SQOcugusLpLvZ6Wl7aWQJxUPhdagsEp5dsUazJJxnYxKtU4nrSPGHGIk3jQaduJMBOCnMv1a-YBhvPI2-wJtLJAS1XmA4e9RqPKCEh8M_rsZVdQGytn5cI_Di5xUk5xspL6W9J5PTsZmSBHsttDD1As6oh5hTNStXEhhVQxsIzA7m7NWj9xWULksD1cD2wmCGBHd0xosCxwSOEyerhBZp1T9yCgDfS6MFA_WiDClHWd2RZ3QTERz9h2n4uzoi1gD0rW3sTqC5Dsy');
+                background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuB7LE-WEOot6b6qh8K8ROpn5STfrQOoU2Mw_OeHp-lYxMT4Zer2roJMBx2R9cpj5Jkcf0ube1Y-nzCvW6XaRT4N-WutydN6XxT1nXSHrmrEVmT1--xLOzTCp7RIP-mfLZf_2Vmd0mml7AN9vSmDGCdFYRkvxBmpQcEZkoQbMHExsBDx6yMouSu5U8ikKPwKtVQVNNLBjd1Kxcll-PSbOlaYjsaRUhMX7gtizxG1OOIKyBYpdpYqTmvpU__arATya2bZ1-OJk_bkstiX');
               "
             ></div>
+            <div>
+              <p class="text-[#111418] text-base font-medium leading-normal">
+                Quick Breakfast
+              </p>
+              <p class="text-[#60748a] text-sm font-normal leading-normal">
+                10 min
+              </p>
+            </div>
           </div>
-          <div class="flex flex-col gap-3">
+          <div class="flex flex-col gap-3 pb-3">
             <div
               class="w-full bg-center bg-no-repeat aspect-square bg-cover rounded-lg"
               style="
-                background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuAs_ulHv5BDlNKkuZqgmii3AsT-ThCiyFFrn9ddmwCs3hPAcW8fvw7CXr8Qn78LknvKkAeJwuWxYgpQa-0HJad9Pn4g0aSX_XrLk4w2xfCZCdmkEVbltQyeLxTWRj8riVUdOkDEo5lXWq5n0r6WvS9o0zl1CC_YCazyOa9c3bBhGaAv1wSygVl25_3NMahLAVNLuIZplNn6wO1JIkhb5PmI7TREuPww-QMsjPjj7cpNMP2bTiwDduQQQoU8VTfCNq-Y5rxzHzoUupeH');
+                background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuAX2e1-HjqkrE314bynrMfhg2x0TksLXJWrKxf9vbYYOpDO5Wu4E4bHMqmSV492xQsfBSiAZ523qN2-2exmGVgrAXm5nLtblvdVaJtwa9SEhEnr3VyQ5XdfNReB8hReMtcf6BpH-IaDtVUbEVAIR8lTvQgDdwMA5LBhPIXyHWGbQWTtH0aXdAfn6VhLMCOTX1lMfJntt8aP931W3EG4HrxFewT3tSeT4SOw5nbCLa_KI7LHvdUDe_RPFXYlqG8bwSG0Aro9zVUOzPPO');
               "
             ></div>
+            <div>
+              <p class="text-[#111418] text-base font-medium leading-normal">
+                Healthy Snack
+              </p>
+              <p class="text-[#60748a] text-sm font-normal leading-normal">
+                5 min
+              </p>
+            </div>
           </div>
         </div>
       </div>
-      <div>
+      <!-- <div>
         <div class="flex justify-end overflow-hidden px-5 pb-5">
           <button
             class="flex max-w-[480px] cursor-pointer items-center justify-center overflow-hidden rounded-lg h-14 bg-[#0d78f2] text-white text-base font-bold leading-normal tracking-[0.015em] min-w-0 px-2 gap-4 pl-4 pr-6"
@@ -167,7 +248,7 @@
           </button>
         </div>
         <div class="h-5 bg-white"></div>
-      </div>
+      </div> -->
     </div>
   </body>
 </html>
