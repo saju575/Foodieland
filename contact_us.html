@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta content="width=device-width, initial-scale=1.0" name="viewport" />
+    <title>Contact Us</title>
+    <script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+    <link
+      href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&amp;display=swap"
+      rel="stylesheet"
+    />
+    <link
+      href="https://fonts.googleapis.com/icon?family=Material+Icons"
+      rel="stylesheet"
+    />
+    <style>
+      body {
+        font-family: "Roboto", sans-serif;
+      }
+    </style>
+    <style>
+      body {
+        min-height: max(884px, 100dvh);
+      }
+    </style>
+  </head>
+  <body class="bg-white">
+    <div class="container mx-auto p-4">
+      <header class="flex items-center justify-between py-4">
+        <button onclick="window.history.back()">
+          <i class="material-icons text-gray-700">arrow_back</i>
+        </button>
+        <h1 class="text-xl font-bold text-gray-800">Contact us</h1>
+        <div class="w-8"></div>
+      </header>
+      <main class="mt-8">
+        <form>
+          <div class="mb-4">
+            <label
+              class="block text-sm font-medium text-gray-500 mb-1"
+              for="name"
+              >NAME</label
+            >
+            <input
+              class="w-full p-3 border border-gray-200 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500"
+              id="name"
+              placeholder="Enter your name..."
+              type="text"
+            />
+          </div>
+          <div class="mb-4">
+            <label
+              class="block text-sm font-medium text-gray-500 mb-1"
+              for="email"
+              >EMAIL ADDRESS</label
+            >
+            <input
+              class="w-full p-3 border border-gray-200 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500"
+              id="email"
+              placeholder="Your email address..."
+              type="email"
+            />
+          </div>
+          <div class="mb-4">
+            <label
+              class="block text-sm font-medium text-gray-500 mb-1"
+              for="subject"
+              >SUBJECT</label
+            >
+            <input
+              class="w-full p-3 border border-gray-200 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500"
+              id="subject"
+              placeholder="Enter subject..."
+              type="text"
+            />
+          </div>
+          <div class="mb-4">
+            <label
+              class="block text-sm font-medium text-gray-500 mb-1"
+              for="enquiry-type"
+              >ENQUIRY TYPE</label
+            >
+            <div class="relative">
+              <select
+                class="w-full appearance-none p-3 border border-gray-200 rounded-lg bg-white focus:outline-none focus:ring-2 focus:ring-blue-500"
+                id="enquiry-type"
+              >
+                <option>Advertising</option>
+                <option>General</option>
+                <option>Support</option>
+              </select>
+              <div
+                class="pointer-events-none absolute inset-y-0 right-0 flex items-center px-2 text-gray-700"
+              >
+                <i class="material-icons">expand_more</i>
+              </div>
+            </div>
+          </div>
+          <div class="mb-6">
+            <label
+              class="block text-sm font-medium text-gray-500 mb-1"
+              for="messages"
+              >MESSAGES</label
+            >
+            <textarea
+              class="w-full p-3 border border-gray-200 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500"
+              id="messages"
+              placeholder="Enter your messages..."
+              rows="5"
+            ></textarea>
+          </div>
+          <button
+            class="w-full bg-black text-white py-3 rounded-lg font-semibold shadow-lg hover:bg-gray-800 transition duration-300"
+          >
+            Submit
+          </button>
+        </form>
+      </main>
+      <section
+        class="mt-12 bg-gray-100 p-6 rounded-2xl relative overflow-hidden"
+      >
+        <div class="relative z-10 text-center">
+          <h2 class="text-2xl font-bold text-gray-800 mb-2">
+            Deliciousness to your inbox
+          </h2>
+          <p class="text-gray-600 mb-6 text-sm">
+            Join our newsletter to stay up to date on features and releases.
+          </p>
+          <div class="flex flex-col sm:flex-row items-center justify-center">
+            <input
+              class="w-full sm:w-auto flex-grow p-3 rounded-lg mb-2 sm:mb-0 sm:mr-2 border border-gray-300 focus:outline-none focus:ring-2 focus:ring-gray-400"
+              placeholder="Your email address..."
+              type="email"
+            />
+            <button
+              class="w-full sm:w-auto bg-black text-white py-3 px-6 rounded-lg font-semibold shadow-lg hover:bg-gray-800 transition duration-300"
+            >
+              Subscribe
+            </button>
+          </div>
+        </div>
+      </section>
+    </div>
+  </body>
+</html>

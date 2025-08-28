@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta content="width=device-width, initial-scale=1.0" name="viewport" />
+    <title>Add New Post</title>
+    <script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+    <link
+      href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&amp;display=swap"
+      rel="stylesheet"
+    />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined"
+      rel="stylesheet"
+    />
+    <style type="text/tailwindcss">
+      body {
+        font-family: "Roboto", sans-serif;
+        min-height: max(884px, 100dvh);
+      }
+      .form-input {
+        @apply w-full border-none text-base placeholder-gray-400 focus:ring-0 px-0;
+      }
+    </style>
+    <style>
+      body {
+        min-height: max(884px, 100dvh);
+      }
+    </style>
+  </head>
+  <body class="bg-white text-gray-800">
+    <div class="fixed top-0 left-0 right-0 bg-white z-10">
+      <div class="flex items-center justify-between p-4">
+        <button class="text-gray-800" onclick="window.history.back()">
+          <span class="material-symbols-outlined"> arrow_back </span>
+        </button>
+        <h1 class="text-lg font-bold text-gray-800">New Post</h1>
+        <div class="w-8"></div>
+      </div>
+    </div>
+    <div
+      class="pt-20 p-6 flex flex-col"
+      style="min-height: calc(max(884px, 100dvh) - 88px)"
+    >
+      <div class="flex-grow">
+        <div class="mb-6 border-b border-gray-200">
+          <input
+            class="form-input text-2xl font-bold placeholder-gray-400"
+            placeholder="Title"
+            type="text"
+          />
+        </div>
+        <div class="mb-6 border-b border-gray-200">
+          <input
+            class="form-input text-gray-600"
+            placeholder="Short description"
+            type="text"
+          />
+        </div>
+        <div class="mb-6">
+          <label
+            class="flex flex-col items-center justify-center w-full h-40 border-2 border-gray-300 border-dashed rounded-lg cursor-pointer bg-gray-50 hover:bg-gray-100"
+          >
+            <div class="flex flex-col items-center justify-center pt-5 pb-6">
+              <span
+                class="material-symbols-outlined text-gray-500 text-4xl mb-3"
+              >
+                cloud_upload
+              </span>
+              <p class="mb-2 text-sm text-gray-500">
+                <span class="font-semibold">Add poster image</span>
+              </p>
+              <p class="text-xs text-gray-500">PNG, JPG (MAX. 800x400px)</p>
+            </div>
+            <input class="hidden" id="dropzone-file" type="file" />
+          </label>
+        </div>
+        <div class="mb-6">
+          <textarea
+            class="form-input text-gray-600 h-48 resize-none"
+            placeholder="Main details/content..."
+          ></textarea>
+        </div>
+      </div>
+      <div class="pb-6">
+        <button
+          class="w-full bg-gray-800 text-white font-bold py-4 px-4 rounded-lg"
+        >
+          Publish
+        </button>
+      </div>
+    </div>
+  </body>
+</html>

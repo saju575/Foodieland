@@ -1,0 +1,500 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta content="width=device-width, initial-scale=1.0" name="viewport" />
+    <title>Foodieland Mobile</title>
+    <script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&amp;display=swap"
+      rel="stylesheet"
+    />
+    <link
+      href="https://fonts.googleapis.com/icon?family=Material+Icons"
+      rel="stylesheet"
+    />
+    <style type="text/tailwindcss">
+      body {
+        font-family: "Inter", sans-serif;
+      }
+      .icon-small {
+        font-size: 16px;
+      }
+    </style>
+    <style>
+      body {
+        min-height: max(884px, 100dvh);
+      }
+      #menu {
+        transform: translateX(-100%);
+        transition: transform 0.3s ease-in-out;
+      }
+      #menu.open {
+        transform: translateX(0);
+      }
+    </style>
+    <style>
+      body {
+        min-height: max(884px, 100dvh);
+      }
+    </style>
+  </head>
+  <body class="bg-white">
+    <div class="p-4 relative">
+      <header class="flex justify-between items-center mb-6">
+        <button id="menu-button">
+          <span class="material-icons">menu</span>
+        </button>
+        <h1 class="text-2xl font-bold">Foodieland</h1>
+        <button class="relative" id="more-button">
+          <span class="material-icons">more_vert</span>
+          <div
+            class="hidden absolute right-0 mt-2 w-48 bg-white rounded-md shadow-lg py-1 z-50"
+            id="dropdown-menu"
+          >
+            <a
+              class="flex items-center px-4 py-2 text-sm text-gray-700 hover:bg-gray-100"
+              href="new_recipe.html"
+            >
+              <span class="material-icons mr-3">add_circle_outline</span>
+              <span>Create Recipe</span>
+            </a>
+            <a
+              class="flex items-center px-4 py-2 text-sm text-gray-700 hover:bg-gray-100"
+              href="add_blog.html"
+            >
+              <span class="material-icons mr-3">post_add</span>
+              <span>Create Blog</span>
+            </a>
+          </div>
+        </button>
+      </header>
+      <div
+        class="fixed top-0 left-0 h-full w-64 bg-white shadow-lg p-6 z-50"
+        id="menu"
+      >
+        <div class="flex justify-between items-center mb-8">
+          <h2 class="text-xl font-bold">Menu</h2>
+          <button id="close-button">
+            <span class="material-icons">close</span>
+          </button>
+        </div>
+        <div class="flex items-center mb-8">
+          <img
+            alt="Profile picture"
+            class="w-12 h-12 rounded-full mr-4"
+            src="https://lh3.googleusercontent.com/aida-public/AB6AXuCpT_-bm6FII0csbQqwMpzo-ipDvbuRDzpFq1xIFTl-bC4hGc4TYJs8Fi8FilZMZrezhdWfhcvgtMr1ajTdTr0rxTnnd-qSnbpji4GBnwuerA1ljgBRSPiBL6--obRCX8QUAYIMOVGIOrc4gzKJiQ7L7yQYoU1ZvBmuM3INRwmXPX5dy12lOLpggtwUZpDUnTOPONvGBPYB0eJ1bEH9lDS_yiBl7EyLVXmE2Dgn38GSgJOKqDSBi2sDgCigFnQfqjwiuxjvH5I07R4D"
+          />
+          <div onclick="window.location.href = 'profile.html'">
+            <p class="font-semibold text-lg">Elena Mayer</p>
+            <a class="text-sm text-red-500" href="#">View Profile</a>
+          </div>
+        </div>
+        <nav class="flex flex-col space-y-4">
+          <a
+            class="text-gray-700 hover:text-black text-lg font-medium"
+            href="home.html"
+            >Home</a
+          >
+          <a
+            class="text-gray-700 hover:text-black text-lg font-medium"
+            href="recipes.html"
+            >Recipes</a
+          >
+          <a
+            class="text-gray-700 hover:text-black text-lg font-medium"
+            href="blog.html"
+            >Blog</a
+          >
+          <a
+            class="text-gray-700 hover:text-black text-lg font-medium"
+            href="contact_us.html"
+            >Contact</a
+          >
+          <a class="text-gray-700 hover:text-black text-lg font-medium" href="#"
+            >About Us</a
+          >
+          <hr class="my-4" />
+          <a
+            class="flex items-center text-gray-700 hover:text-black text-lg font-medium"
+            href="new_recipe.html"
+          >
+            <span class="material-icons mr-2">add_circle_outline</span>
+            Create Recipe
+          </a>
+          <a
+            class="flex items-center text-gray-700 hover:text-black text-lg font-medium"
+            href="#"
+          >
+            <span class="material-icons mr-2">post_add</span>
+            Create Blog
+          </a>
+        </nav>
+      </div>
+      <main>
+        <section class="relative rounded-lg overflow-hidden mb-6">
+          <img
+            alt="Spicy chicken wings"
+            class="w-full h-64 object-cover"
+            src="https://lh3.googleusercontent.com/aida-public/AB6AXuCpT_-bm6FII0csbQqwMpzo-ipDvbuRDzpFq1xIFTl-bC4hGc4TYJs8Fi8FilZMZrezhdWfhcvgtMr1ajTdTr0rxTnnd-qSnbpji4GBnwuerA1ljgBRSPiBL6--obRCX8QUAYIMOVGIOrc4gzKJiQ7L7yQYoU1ZvBmuM3INRwmXPX5dy12lOLpggtwUZpDUnTOPONvGBPYB0eJ1bEH9lDS_yiBl7EyLVXmE2Dgn38GSgJOKqDSBi2sDgCigFnQfqjwiuxjvH5I07R4D"
+          />
+          <div
+            class="absolute inset-0 bg-black bg-opacity-30 p-4 flex flex-col justify-end"
+          >
+            <span
+              class="bg-red-500 text-white text-xs font-semibold px-2 py-1 rounded-full self-start mb-2"
+              >Hot Recipes</span
+            >
+            <h2 class="text-white text-2xl font-bold leading-tight">
+              Spicy delicious chicken wings
+            </h2>
+            <p class="text-white text-sm mt-2">
+              Lorem ipsum dolor sit amet, consectetuipisicing elit, sed do
+              eiusmod tempor incididunt ut labore et dolore magna aliqut enim ad
+              minim.
+            </p>
+            <div class="flex items-center mt-4">
+              <img
+                alt="John Smith"
+                class="w-8 h-8 rounded-full mr-2"
+                src="https://lh3.googleusercontent.com/aida-public/AB6AXuA6Y2ds0Yd-WdD2ibc6Z6lKmGeb9hVNdnH03f-dd7LA5pW_epQik8nCaajYogBG0VNYCk2WcJmX5tuDZQDsGddXulN9oy2aUCeAx0hhDDI5tfhN4fnPncrJuyaoGbJxCFFIq07WPZ6t8nvfTyDOWOL8aaLCAAO4_aBlnR5EzU9jyuURWyLMgGzh7PxsbDpw7dvSGu-0CEgnDGSenjisYhqvEHFDmfQx1WmHbbeRJLLdb76-EdOXftE8MvQO-x5MuGghFmS8b5VhKlyo"
+              />
+              <div>
+                <p class="text-white font-semibold text-sm">John Smith</p>
+                <p class="text-gray-300 text-xs">15 March 2022</p>
+              </div>
+            </div>
+          </div>
+        </section>
+        <section class="mb-6">
+          <div class="flex justify-between items-center mb-4">
+            <h3 class="text-xl font-bold">Categories</h3>
+            <a class="text-red-500 text-sm font-semibold" href="categories.html"
+              >View All</a
+            >
+          </div>
+          <div class="grid grid-cols-3 gap-4">
+            <div class="text-center">
+              <div class="bg-red-100 rounded-lg p-3 inline-block mb-2">
+                <img
+                  alt="Breakfast"
+                  class="w-10 h-10"
+                  src="https://lh3.googleusercontent.com/aida-public/AB6AXuBzcAX7Ami8QhogFr3wGT6fFb94QknhGO2r-IMFrMp1Wwf0PnEf0J4Hf08xypa5GMOmFQA7Cz8BPhK9lvnFMFlQBCqrQY0XBCyGDPLGgh6oWExW_YU5iIbyrW3h8dBjEvT_-B-Ub--n3SgA1nq8-DwEQf3hwNSb8SaKwO1fN3OkamtmYg1FXvjXJWJ5Bb799DPPtCbI7n12Hr96iTbqIXG294yXE8dUNZGMkcQr_OggumkVlucKtkwT3KlqnMmH7p2wsE5cgV9hR6N9"
+                />
+              </div>
+              <p class="text-sm font-semibold">Breakfast</p>
+            </div>
+            <div class="text-center">
+              <div class="bg-green-100 rounded-lg p-3 inline-block mb-2">
+                <img
+                  alt="Vegan"
+                  class="w-10 h-10"
+                  src="https://lh3.googleusercontent.com/aida-public/AB6AXuBkNxP-n3hgG_gyaeldeqtC07yjXBVhHbUWJyEVmZDnnxVO7YLG-Vf3j13xvqwhZ4yS8wXIwQ58biKmOUCHCOK2K6hfiw6SmtGgecs5vJo4P5dXCckGO5L5qQPxrH4LebrQI0pcVSaMgYe0pjB1TtAnRxDNs6Biq9cjwukU5jgu3LTKPSVZZ5SqQCkWoxjzlsydaitMDUIXesRbjjbQ6OfcPQcoK8pbhv6D9CCjMDM6ZR1JCldOCqhyGUywJB1qfN8mBl_fCB7md14N"
+                />
+              </div>
+              <p class="text-sm font-semibold">Vegan</p>
+            </div>
+            <div class="text-center">
+              <div class="bg-red-200 rounded-lg p-3 inline-block mb-2">
+                <img
+                  alt="Meat"
+                  class="w-10 h-10"
+                  src="https://lh3.googleusercontent.com/aida-public/AB6AXuAKlk9dv2V_mogQx5AVHcD8vnxQfduM1ov6OoAXQ9DArWC8eMfmN5tNTVzHEAxwzDVXXhVSMH1KUYgBLvVPJcRGvtKWvoYAxXx4sEGhSyqpYML73S3woAfk-R9Z4Gl2B0IAvrDzBkh5-cb6baYMtUie4kEBi57mHGzKFf26DPUXsPeXbjCR0qiLJWgvWnWKO-pf8ezthfJpYdBoaI0ssWuWbv1pV6TO-gtutG79Y9oMIzD1xbwCq_7UIeyuNyTuC5ODvsMQA28CssR4"
+                />
+              </div>
+              <p class="text-sm font-semibold">Meat</p>
+            </div>
+            <div class="text-center">
+              <div class="bg-blue-100 rounded-lg p-3 inline-block mb-2">
+                <img
+                  alt="Dessert"
+                  class="w-10 h-10"
+                  src="https://lh3.googleusercontent.com/aida-public/AB6AXuD8PpawOMQDvACX0xg2jJI_a5Ogf9sZNjj04IM64kFRj4G8AZfAw2IUNWpXNpY03WdQdPaTFMKA9VMvs37-9MP9QlP4Yey472Uq6V4f3O79bbUOxTZnSs5xW13NeXCbJJNpseIcavT0IApafOkF79v78DRhb1dw5Jw55AJpm7WGpSEUe0aMmHb7QqdjPMWbzp2R3GOgXuKcxnfc_uqvH8gYrkcgaMZl_bPR94VVyNTkOU_QRvsewbu1gH5ng87a8YLcfZEFF6wW5OgX"
+                />
+              </div>
+              <p class="text-sm font-semibold">Dessert</p>
+            </div>
+            <div class="text-center">
+              <div class="bg-yellow-100 rounded-lg p-3 inline-block mb-2">
+                <img
+                  alt="Lunch"
+                  class="w-10 h-10"
+                  src="https://lh3.googleusercontent.com/aida-public/AB6AXuCBvssXsTbzlXnl17zNo97YVfd_-2Uvqsc-ljG5dzaEFNkY0n91lEDmQ_9wRGhkYRNQSqh2SRZsMtWy29EH8R7v0VUEjNlHXsBHdNGPc5HenEX341Xj88l2oourpeDT2tqPwTAjQ1eIiY5qp8gbpy9hNOAgFOnV7spEyezXt_sAhmK-8cVOBPOxhPL8eyI38I4yJ3_7Hl1_u1RQabkumj7FdGxdP1IMGW5WmvdadqShKZ1v5Tf7-qr2jPeFeuolbrDIR-UhEiKhLbRc"
+                />
+              </div>
+              <p class="text-sm font-semibold">Lunch</p>
+            </div>
+            <div class="text-center">
+              <div class="bg-pink-100 rounded-lg p-3 inline-block mb-2">
+                <img
+                  alt="Chocolate"
+                  class="w-10 h-10"
+                  src="https://lh3.googleusercontent.com/aida-public/AB6AXuDslzSv5rnrqTQqffXKz0KUHKeXKxS_tjdVBjL4pkxmod846yOe-Z5dkGQ3VNrY_x_0tXLbx-tUIr-qu8Tzt5b6lRMa1XGTOP_7nf8-DuEsf3feNYS4fcgk3bpcpkS5hxEt5rnQgE2G0e3JHG9csx2Bu7Wt_WDT1QuBbwmuV2NBHfVK_hRu_3D1WpX0VshuqG5QX2g2Ds5DnkUGydfXLmMhdr2PF6XQRSHU_TcXT7u8p98K1sQd_90bdGSTqEzAPBbLWqJwB7A5Wcej"
+                />
+              </div>
+              <p class="text-sm font-semibold">Chocolate</p>
+            </div>
+          </div>
+        </section>
+        <section class="mb-6">
+          <div class="flex justify-between items-center mb-4">
+            <h3 class="text-xl font-bold">Simple and tasty recipes</h3>
+            <a class="text-red-500 text-sm font-semibold" href="#">View All</a>
+          </div>
+          <p class="text-gray-500 text-sm mb-4">
+            Lorem ipsum dolor sit amet, consectetuipisicing elit, sed do eiusmod
+            tempor incididunt ut labore et dolore magna aliqut enim ad minim.
+          </p>
+          <div class="space-y-4">
+            <div
+              class="bg-gray-50 rounded-lg p-4"
+              onclick="location.href='recipe_details.html'"
+            >
+              <div class="relative">
+                <img
+                  alt="Big and Juicy Wagyu Beef Cheeseburger"
+                  class="w-full h-40 object-cover rounded-lg mb-2"
+                  src="https://lh3.googleusercontent.com/aida-public/AB6AXuBhVzGIJssdEPpAcCct7KRuXRGgW782qtXsbtO083s9uDKTlk-adp2ELxnbQ1ytq1KU7Vo-hxQokD_NFoQPzqW2yeOx0MJyJwn8WlNe6KWWQgXN0VYhQyzRjsWNx3gJGTiKH6xqMtFDfguSo2P-hzwz2KOmtu38j6Q1yh3A3_zi8aKk_8wQgZB-YyKCx6kinLv5efv_XVp5wgg9YPIwACZ2PMXwNVW5LUXox2UdBcyzJxm1OJ-ySIg1YuQaQTuf2GIeD3LW3lG6CMwU"
+                />
+                <span
+                  class="material-icons absolute top-2 right-2 bg-white rounded-full p-1 text-gray-700"
+                  >bookmark_border</span
+                >
+              </div>
+              <h4 class="font-bold text-lg">
+                Big and Juicy Wagyu Beef Cheeseburger
+              </h4>
+              <div class="flex items-center text-sm text-gray-500 mt-2">
+                <span class="material-icons icon-small mr-1">timer</span>
+                <span>30 Minutes</span>
+                <span class="material-icons icon-small ml-4 mr-1"
+                  >whatshot</span
+                >
+                <span>Snack</span>
+              </div>
+            </div>
+            <div class="bg-gray-50 rounded-lg p-4">
+              <div class="relative">
+                <img
+                  alt="Fresh Lime Roasted Salmon with Ginger Sauce"
+                  class="w-full h-40 object-cover rounded-lg mb-2"
+                  src="https://lh3.googleusercontent.com/aida-public/AB6AXuC77UdNlu0TlsRXW9vYeoEtU7lczCPuPDz9LGoNsuD6cbqdeKXy7iYo7bM_QDj8FfSmfGyUrf6mkbGPQzE6TsXcjVddP_KlRarsPU0rIaUS4rOspzJtt1XKrd2OoRE7n3f-9F20f_x-1ST6bzfEpeyNkMlEB4r0Bf6CYJpIRXHmLL0ZFKmzFL6K5J7hMCd4-aw1BijgDHi9-q7xY6oWg6czo2qS8qWkJlkS1fs374kTQhY5tbO4EJVlObP1qpmjfP63SkM4cWCTHM4g"
+                />
+                <span
+                  class="material-icons absolute top-2 right-2 bg-white rounded-full p-1 text-gray-700"
+                  >bookmark_border</span
+                >
+              </div>
+              <h4 class="font-bold text-lg">
+                Fresh Lime Roasted Salmon with Ginger Sauce
+              </h4>
+              <div class="flex items-center text-sm text-gray-500 mt-2">
+                <span class="material-icons icon-small mr-1">timer</span>
+                <span>30 Minutes</span>
+                <span class="material-icons icon-small ml-4 mr-1"
+                  >whatshot</span
+                >
+                <span>Fish</span>
+              </div>
+            </div>
+            <div class="bg-gray-50 rounded-lg p-4">
+              <div class="relative">
+                <img
+                  alt="Strawberry Oatmeal Pancake with Honey Syrup"
+                  class="w-full h-40 object-cover rounded-lg mb-2"
+                  src="https://lh3.googleusercontent.com/aida-public/AB6AXuAM77w0dnFxS6rrHSiBYcjvqdl8RU60ri7p1QpIodCfFs4TBioaU3VWXdMfl7sJvSWSQNp2WGNnwDCU4KOBtb3lNKxsI3C8Oqq4JtkE2oMVc15e658BbkV3M2dfdxM5OC256PMjpda2rjzp8h1LW3azbT9zn4DhRf6NSmDjtn6gj38wSCGjm-n4MV250sB-0NPN7WeyBTZvCxWLYTtmlu7JyerslY1ThKJbRyeRbjkXaBjJ07fQCTuMeWxuiR2QyqtWCyIBGXDceTaU"
+                />
+                <span
+                  class="material-icons absolute top-2 right-2 bg-white rounded-full p-1 text-gray-700"
+                  >bookmark_border</span
+                >
+              </div>
+              <h4 class="font-bold text-lg">
+                Strawberry Oatmeal Pancake with Honey Syrup
+              </h4>
+              <div class="flex items-center text-sm text-gray-500 mt-2">
+                <span class="material-icons icon-small mr-1">timer</span>
+                <span>30 Minutes</span>
+                <span class="material-icons icon-small ml-4 mr-1"
+                  >whatshot</span
+                >
+                <span>Breakfast</span>
+              </div>
+            </div>
+          </div>
+        </section>
+        <section
+          class="bg-gray-50 rounded-lg p-4 flex flex-col items-center text-center mb-6"
+        >
+          <img
+            alt="Chef with a plate of food"
+            class="w-48 h-48 object-cover mb-4"
+            src="https://lh3.googleusercontent.com/aida-public/AB6AXuCUNC6iVegYpJh91RfkpVg4n60ilUF1T5aV8E57rZEQ7ars-jlsaz7sljlq8ELJ3lLzL7qM0paCHuvWPr6Ps_A8cWf-ErCUNoWQ-UwVwjekhMBIrXG6ldANQHlY510aOxdAoJL_7V7Al8AW8HslZ1orvvVHP6em3FMyszNgY3UxDMXLj-qob7m-Ng1NZw0bW-yiG0liEhTq2i4EH8C91jEpfCqEKk9yPLP2f3h4ixna3_wSikTNh_trV7Ya6mumyqLNORAfRP4S0uen"
+          />
+          <h3 class="text-xl font-bold mb-2">
+            Everyone can be a chef in their own kitchen
+          </h3>
+          <p class="text-gray-500 text-sm mb-4">
+            Lorem ipsum dolor sit amet, consectetuipisicing elit, sed do eiusmod
+            tempor incididunt ut labore et dolore magna aliqut enim ad minim.
+          </p>
+          <button
+            class="bg-black text-white text-sm font-semibold px-6 py-3 rounded-lg"
+          >
+            Learn More
+          </button>
+        </section>
+        <section class="mb-6">
+          <h3 class="text-xl font-bold text-center mb-4">
+            Check out @foodieland on Instagram
+          </h3>
+          <div class="grid grid-cols-2 gap-2">
+            <img
+              alt="Instagram post 1"
+              class="rounded-lg"
+              src="https://lh3.googleusercontent.com/aida-public/AB6AXuDMUZ_lbSxyv0TNsKF2d-4eCfdu41C8n3-RdQiJFsFRmvCGthhIkBiCh7DJBtAMgUPFsrsHPZcMT7u8eN9K5TfBK0qIX6NdZGpvI-HCclIi1JHpjhG55Z-OjfEUvOtEa6vOfV8vit-BnAjr3KZ7lDDRGcGn9x_PJgdWfoMDMcLp30_owgE8mZSYo_sDUh-Bt8t86kJsJxDzAUHz8UrBW5Sl3Jbh1ulL6OfRsPMuaIeJ2I8l8UyT9wBFgmgRe4qWN6YZubm7COWsTFUh"
+            />
+            <img
+              alt="Instagram post 2"
+              class="rounded-lg"
+              src="https://lh3.googleusercontent.com/aida-public/AB6AXuBNMqcoPxhxKRxYzzkojWvvQrKyVgHt2wz-jvMftNdPq8P2cQziiuLtsEkH6_9sgnxYjiJtTaDl30c7LtarsslnbJEpF6CEIwTwekPAv-3os72ysJ8I0obtx7PzgmPc14TwXpUQkgCbRLI6pGOq_nQMNs0cz67gOzb_cvv5oNdYXRdoTtqlCQDSw55_q3HSfvxCdCOLyPRKMn15jiDAIUoUeVWKmVXSl3zrrjOEHIpxUNRGkApFn9KbfZ6qZcYsVJgscyEgc8Bgkq5_"
+            />
+            <img
+              alt="Instagram post 3"
+              class="rounded-lg"
+              src="https://lh3.googleusercontent.com/aida-public/AB6AXuB5mU7EXZdQvPK3R6iqaA93JTTiZflv7hV804DYT1LtMgoJDw7hwJYkymzd2uN2lJzwVyD0b9yBSsSnRYysLGqpz7ZEuf0Vggv2uJLiWyV9L5MuN8Ns24shZ5G1zwrSFOPjvNMlU8LqkC9tYLRZV8hMJXpMhHe2fuJ4GLEAlQKAGo5PPdlmK2DmGj5SOOQ8W7hFwqAaRbqmOEIQlK8QPsKPCRYhgWWurEPUfYw0JRN_ZUX97uiQBGciwLmYta6k2CRZDAW08a0_tk-A"
+            />
+            <img
+              alt="Instagram post 4"
+              class="rounded-lg"
+              src="https://lh3.googleusercontent.com/aida-public/AB6AXuBYgrfJ7Js8olrnkDk20F-5YwNmmy3KkpLEeu_3mgyVz2M0P7SORYHAcEvjLTwrfot_FZL3Zsdf4HbCehwesQVynt1HW-NNH42vfoJQ85B0ZjV72jrNUBCjZAD3Br70Xe9u56G_biMwQ-qpUuhmvS9R8iltwyl_nghMaRwcQBiia5MnGqUfw5WIgo7JyDyg618eZlpR4XSEd9mdIr25rgLyBYtgCfTNPE9QXGB8ZN0l9_vDtITl9vzTRd7mo3rMVcKg7wx47lV7OYb7"
+            />
+          </div>
+          <div class="text-center mt-4">
+            <button
+              class="bg-black text-white text-sm font-semibold px-6 py-3 rounded-lg flex items-center justify-center mx-auto"
+            >
+              Visit Our Instagram
+              <span class="material-icons ml-2">east</span>
+            </button>
+          </div>
+        </section>
+        <section class="mb-6">
+          <div class="flex justify-between items-center mb-4">
+            <h3 class="text-xl font-bold">Try this delicious recipe</h3>
+            <a class="text-red-500 text-sm font-semibold" href="#">View All</a>
+          </div>
+          <div class="space-y-4">
+            <div class="bg-gray-50 rounded-lg p-4">
+              <div class="relative">
+                <img
+                  alt="Mixed Tropical Fruit Salad with Superfood Boosts"
+                  class="w-full h-40 object-cover rounded-lg mb-2"
+                  src="https://lh3.googleusercontent.com/aida-public/AB6AXuDI51KyxcJClOWJ5YRzREajOBIUwU-vp1GnFQgmIUZhB9oj2ARLged961ORSZoLyjPFAKyHIxArSqqpT6DMhr9oYmEV3-vQ329_BIQISGSDxsyyaNRKAVIEy-Tq0GB2ikPzrNuDAH0ScpEirbNVIh5uhSfraScytmYZG9xoQ1ktYdyeM92-ZqNcpGFwiH6Xf0dRTtkGmd9D-W4Y_TjlhaGrcqC68eo8eqPZ2A7m8zYyAcugcJnNzBItFjsc8hqBQrjP3ILMxtBUGaGE"
+                />
+                <span
+                  class="material-icons absolute top-2 right-2 bg-white rounded-full p-1 text-gray-700"
+                  >bookmark_border</span
+                >
+              </div>
+              <h4 class="font-bold text-lg">
+                Mixed Tropical Fruit Salad with Superfood Boosts
+              </h4>
+              <div class="flex items-center text-sm text-gray-500 mt-2">
+                <span class="material-icons icon-small mr-1">timer</span>
+                <span>30 Minutes</span>
+                <span class="material-icons icon-small ml-4 mr-1"
+                  >whatshot</span
+                >
+                <span>Healthy</span>
+              </div>
+            </div>
+            <div class="bg-gray-50 rounded-lg p-4">
+              <div class="relative">
+                <img
+                  alt="Big and Juicy Wagyu Beef Cheeseburger"
+                  class="w-full h-40 object-cover rounded-lg mb-2"
+                  src="https://lh3.googleusercontent.com/aida-public/AB6AXuDd00NcMjdS7UveTCP6WGuU3b3C1guzR1bIpcFtTYC61wIfB95RQiQpZKnQL-n836X59l49SsnHlV4_wC9_sFNF5CRV183IwsFerSq8C7YeMCo7e0KxjA73_3BI3jcneuszdyCdvS1zPxTKtP6kKjYHW57-fUq4oh-dIUkQuS25qbrYX9kOUVWSnzNnWvCgMZMpzSqk49-oqrkgb8rHocXOYO9Hq9NX8LrqVu6hXcmFuP2pPcLRsBzADg6DH4k0hEw9kR6OuS61Jzzg"
+                />
+                <span
+                  class="material-icons absolute top-2 right-2 bg-white rounded-full p-1 text-gray-700"
+                  >bookmark_border</span
+                >
+              </div>
+              <h4 class="font-bold text-lg">
+                Big and Juicy Wagyu Beef Cheeseburger
+              </h4>
+              <div class="flex items-center text-sm text-gray-500 mt-2">
+                <span class="material-icons icon-small mr-1">timer</span>
+                <span>30 Minutes</span>
+                <span class="material-icons icon-small ml-4 mr-1"
+                  >whatshot</span
+                >
+                <span>Western</span>
+              </div>
+            </div>
+          </div>
+        </section>
+        <section class="text-center bg-gray-50 p-6 rounded-lg mb-6">
+          <h3 class="text-2xl font-bold mb-2">Deliciousness to your inbox</h3>
+          <p class="text-gray-500 text-sm mb-4">
+            Lorem ipsum dolor sit amet, consectetuipisicing elit, sed do eiusmod
+            tempor incididunt ut labore et dolore magna aliqut enim ad minim.
+          </p>
+          <form class="flex flex-col items-center">
+            <input
+              class="w-full p-3 border border-gray-300 rounded-lg mb-2"
+              placeholder="Your email address..."
+              type="email"
+            />
+            <button
+              class="bg-black text-white w-full py-3 rounded-lg font-semibold"
+              type="submit"
+            >
+              Subscribe
+            </button>
+          </form>
+        </section>
+        <footer class="text-center py-6">
+          <h2 class="text-2xl font-bold mb-2">Foodieland</h2>
+          <p class="text-gray-500 text-sm mb-4">
+            Lorem ipsum dolor sit amet, consectetuipisicing elit,
+          </p>
+          <div class="flex justify-center space-x-4 mb-4">
+            <a href="#">Home</a>
+            <a href="#">Recipes</a>
+            <a href="#">Blog</a>
+            <a href="#">Contact</a>
+            <a href="#">About Us</a>
+          </div>
+          <p class="text-xs text-gray-400">
+            © 2020 Flowbase. Powered by
+            <a class="text-black font-semibold" href="#">Webflow</a>
+          </p>
+        </footer>
+      </main>
+    </div>
+    <script>
+      const menuButton = document.getElementById("menu-button");
+      const closeButton = document.getElementById("close-button");
+      const menu = document.getElementById("menu");
+      menuButton.addEventListener("click", () => {
+        menu.classList.add("open");
+      });
+      closeButton.addEventListener("click", () => {
+        menu.classList.remove("open");
+      });
+      const moreButton = document.getElementById("more-button");
+      const dropdownMenu = document.getElementById("dropdown-menu");
+      moreButton.addEventListener("click", (event) => {
+        event.stopPropagation();
+        dropdownMenu.classList.toggle("hidden");
+      });
+      document.addEventListener("click", () => {
+        if (!dropdownMenu.classList.contains("hidden")) {
+          dropdownMenu.classList.add("hidden");
+        }
+      });
+    </script>
+  </body>
+</html>

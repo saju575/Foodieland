@@ -1,0 +1,173 @@
+<html>
+  <head>
+    <meta content="width=device-width, initial-scale=1.0" name="viewport" />
+    <link rel="preconnect" href="https://fonts.gstatic.com/" crossorigin="" />
+    <link
+      rel="stylesheet"
+      as="style"
+      onload="this.rel='stylesheet'"
+      href="https://fonts.googleapis.com/css2?display=swap&amp;family=Noto+Sans%3Awght%40400%3B500%3B700%3B900&amp;family=Plus+Jakarta+Sans%3Awght%40400%3B500%3B700%3B800"
+    />
+
+    <title>Stitch Design</title>
+    <link rel="icon" type="image/x-icon" href="data:image/x-icon;base64," />
+
+    <script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+  </head>
+  <body>
+    <div
+      class="relative flex size-full min-h-screen flex-col bg-white justify-between group/design-root overflow-x-hidden"
+      style="font-family: 'Plus Jakarta Sans', 'Noto Sans', sans-serif"
+    >
+      <div>
+        <div class="flex items-center bg-white p-4 pb-2 justify-between">
+          <div
+            class="text-[#111418] flex size-12 shrink-0 items-center"
+            data-icon="ArrowLeft"
+            data-size="24px"
+            data-weight="regular"
+            onclick="window.history.back()"
+          >
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              width="24px"
+              height="24px"
+              fill="currentColor"
+              viewBox="0 0 256 256"
+            >
+              <path
+                d="M224,128a8,8,0,0,1-8,8H59.31l58.35,58.34a8,8,0,0,1-11.32,11.32l-72-72a8,8,0,0,1,0-11.32l72-72a8,8,0,0,1,11.32,11.32L59.31,120H216A8,8,0,0,1,224,128Z"
+              ></path>
+            </svg>
+          </div>
+          <h2
+            class="text-[#111418] text-lg font-bold leading-tight tracking-[-0.015em] flex-1 text-center pr-12"
+          >
+            Profile
+          </h2>
+        </div>
+        <div class="flex p-4 @container">
+          <div class="flex w-full flex-col gap-4 items-center">
+            <div class="flex gap-4 flex-col items-center">
+              <div
+                class="bg-center bg-no-repeat aspect-square bg-cover rounded-full min-h-32 w-32"
+                style="
+                  background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuA4oDwuUa1wooIoawU3IBKARfwUIG1FLV3OFSBhCEkUjAG_Ry1X3nQ6qK3IW2yy6_OBK0LDcS2eAZIdLWtkAn0hEokENwDHgOAC9QmC9uU_Kcfw-MIcvGQ0PCf5wFRoszjsp_VGyRzO7bEjCcPIs2Wa88lzYhI8_q__lWhjHkqy9YYADmBWvpg8_wtwaQB84eRqPSWR1FAclheWvPsbKW7sE7NkTnAKQ3Cm7OuSrjIUoVCRivs8MHMxbAY8r-tWZeeRfOnuywVA7ICT');
+                "
+              ></div>
+              <div
+                class="flex flex-col items-center justify-center justify-center"
+              >
+                <p
+                  class="text-[#111418] text-[22px] font-bold leading-tight tracking-[-0.015em] text-center"
+                >
+                  Olivia Bennett
+                </p>
+                <p
+                  class="text-[#60748a] text-base font-normal leading-normal text-center"
+                >
+                  @olivia_bennett
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="flex flex-wrap gap-3 px-4 py-3">
+          <div
+            class="flex min-w-[111px] flex-1 basis-[fit-content] flex-col gap-2 rounded-lg border border-[#dbe0e6] p-3 items-center text-center"
+          >
+            <p
+              class="text-[#111418] tracking-light text-2xl font-bold leading-tight"
+            >
+              12
+            </p>
+            <div class="flex items-center gap-2">
+              <p class="text-[#60748a] text-sm font-normal leading-normal">
+                Recipes
+              </p>
+            </div>
+          </div>
+        </div>
+        <h3
+          class="text-[#111418] text-lg font-bold leading-tight tracking-[-0.015em] px-4 pb-2 pt-4"
+        >
+          About
+        </h3>
+        <p
+          class="text-[#111418] text-base font-normal leading-normal pb-3 pt-1 px-4"
+        >
+          Food enthusiast and home cook. Sharing my favorite recipes and
+          culinary adventures.
+        </p>
+        <h3
+          class="text-[#111418] text-lg font-bold leading-tight tracking-[-0.015em] px-4 pb-2 pt-4"
+        >
+          Recipes
+        </h3>
+        <div
+          class="grid grid-cols-[repeat(auto-fit,minmax(158px,1fr))] gap-3 p-4"
+        >
+          <div class="flex flex-col gap-3">
+            <div
+              class="w-full bg-center bg-no-repeat aspect-square bg-cover rounded-lg"
+              style="
+                background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuCkunR3zYxS2E3ss4sc1FVflG3B5s2H-hvxqIX6VCA2INdvnOmfaRuKmbMxNiVl4KE46ZfcOYsTqJHaglaTU77218J9Ndvwy8Iy6XF7-x_llUdDzLS9K-M7xBhK4cV0ak3xtKctYDj4oWZMtfdGyWmUynBNgNu1oB86HkrMuYc0b3lehQYOl6b339LUiPjUyLK3dcJNPTtWlUmBtih-Elm1MokHB9DGQQmCJQhzXxUbZx59DKRq2iK41qc2-5MrXcW5Q5lyNsovsUu-');
+              "
+            ></div>
+          </div>
+          <div class="flex flex-col gap-3">
+            <div
+              class="w-full bg-center bg-no-repeat aspect-square bg-cover rounded-lg"
+              style="
+                background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuAgd6nfb69x4YU0QV2Gtz9FXANLa3FJT93rd4vqq6j5LZsxml_sm0zgCUx_wBSTt9Y15BUNJ9SZy02lLG2euWZNiSaM0Z9cG007c4QN5yU5W1n0wIbNyQhio_mC2uzzX49MN6jTPM8K-x7ImYTNdDEOvM8udn7X3wphXWNtDWwXkk_7urLjw-sFdx7i-3JxEwHhzgAyX1thLWEUtG2OiPTzMJpO34l7arn8z1c1H5hxLxwcFEDQiIiIEsgvfQiUt01Uyqwfu0ib8bf1');
+              "
+            ></div>
+          </div>
+          <div class="flex flex-col gap-3">
+            <div
+              class="w-full bg-center bg-no-repeat aspect-square bg-cover rounded-lg"
+              style="
+                background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuC9SQOcugusLpLvZ6Wl7aWQJxUPhdagsEp5dsUazJJxnYxKtU4nrSPGHGIk3jQaduJMBOCnMv1a-YBhvPI2-wJtLJAS1XmA4e9RqPKCEh8M_rsZVdQGytn5cI_Di5xUk5xspL6W9J5PTsZmSBHsttDD1As6oh5hTNStXEhhVQxsIzA7m7NWj9xWULksD1cD2wmCGBHd0xosCxwSOEyerhBZp1T9yCgDfS6MFA_WiDClHWd2RZ3QTERz9h2n4uzoi1gD0rW3sTqC5Dsy');
+              "
+            ></div>
+          </div>
+          <div class="flex flex-col gap-3">
+            <div
+              class="w-full bg-center bg-no-repeat aspect-square bg-cover rounded-lg"
+              style="
+                background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuAs_ulHv5BDlNKkuZqgmii3AsT-ThCiyFFrn9ddmwCs3hPAcW8fvw7CXr8Qn78LknvKkAeJwuWxYgpQa-0HJad9Pn4g0aSX_XrLk4w2xfCZCdmkEVbltQyeLxTWRj8riVUdOkDEo5lXWq5n0r6WvS9o0zl1CC_YCazyOa9c3bBhGaAv1wSygVl25_3NMahLAVNLuIZplNn6wO1JIkhb5PmI7TREuPww-QMsjPjj7cpNMP2bTiwDduQQQoU8VTfCNq-Y5rxzHzoUupeH');
+              "
+            ></div>
+          </div>
+        </div>
+      </div>
+      <div>
+        <div class="flex justify-end overflow-hidden px-5 pb-5">
+          <button
+            class="flex max-w-[480px] cursor-pointer items-center justify-center overflow-hidden rounded-lg h-14 bg-[#0d78f2] text-white text-base font-bold leading-normal tracking-[0.015em] min-w-0 px-2 gap-4 pl-4 pr-6"
+          >
+            <div
+              class="text-white"
+              data-icon="Plus"
+              data-size="24px"
+              data-weight="regular"
+            >
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                width="24px"
+                height="24px"
+                fill="currentColor"
+                viewBox="0 0 256 256"
+              >
+                <path
+                  d="M224,128a8,8,0,0,1-8,8H136v80a8,8,0,0,1-16,0V136H40a8,8,0,0,1,0-16h80V40a8,8,0,0,1,16,0v80h80A8,8,0,0,1,224,128Z"
+                ></path>
+              </svg>
+            </div>
+          </button>
+        </div>
+        <div class="h-5 bg-white"></div>
+      </div>
+    </div>
+  </body>
+</html>

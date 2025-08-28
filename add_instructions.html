@@ -1,0 +1,182 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta content="width=device-width, initial-scale=1.0" name="viewport" />
+    <title>Add Instructions</title>
+    <script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&amp;display=swap"
+      rel="stylesheet"
+    />
+    <link
+      href="https://fonts.googleapis.com/icon?family=Material+Icons"
+      rel="stylesheet"
+    />
+    <style type="text/tailwindcss">
+      body {
+        font-family: "Poppins", sans-serif;
+      }
+    </style>
+    <style>
+      body {
+        min-height: max(884px, 100dvh);
+      }
+    </style>
+    <style>
+      body {
+        min-height: max(884px, 100dvh);
+      }
+    </style>
+  </head>
+  <body class="bg-white">
+    <div class="container mx-auto relative min-h-screen">
+      <header class="flex justify-between items-center p-4">
+        <button
+          class="rounded-full text-gray-800"
+          onclick="window.history.back()"
+        >
+          <span class="material-icons">arrow_back</span>
+        </button>
+        <h1 class="text-xl font-semibold text-gray-900">Add Instructions</h1>
+        <button class="p-2 rounded-full text-gray-800">
+          <span class="material-icons">more_horiz</span>
+        </button>
+      </header>
+      <main class="pb-28">
+        <div class="p-4">
+          <ul class="space-y-6">
+            <li class="flex items-start">
+              <div
+                class="flex-shrink-0 w-8 h-8 rounded-full bg-indigo-500 text-white flex items-center justify-center font-bold"
+              >
+                1
+              </div>
+              <div class="ml-4 flex-1">
+                <div class="flex justify-between items-center">
+                  <label
+                    class="text-lg font-semibold text-gray-900"
+                    for="step1-title"
+                    >Title</label
+                  >
+
+                  <button
+                    class="text-[#0e1a13] flex size-7 items-center justify-center"
+                    data-icon="Trash"
+                    data-size="24px"
+                    data-weight="regular"
+                  >
+                    <svg
+                      xmlns="http://www.w3.org/2000/svg"
+                      width="24px"
+                      height="24px"
+                      fill="currentColor"
+                      viewBox="0 0 256 256"
+                    >
+                      <path
+                        d="M216,48H176V40a24,24,0,0,0-24-24H104A24,24,0,0,0,80,40v8H40a8,8,0,0,0,0,16h8V208a16,16,0,0,0,16,16H192a16,16,0,0,0,16-16V64h8a8,8,0,0,0,0-16ZM96,40a8,8,0,0,1,8-8h48a8,8,0,0,1,8,8v8H96Zm96,168H64V64H192ZM112,104v64a8,8,0,0,1-16,0V104a8,8,0,0,1,16,0Zm48,0v64a8,8,0,0,1-16,0V104a8,8,0,0,1,16,0Z"
+                      ></path>
+                    </svg>
+                  </button>
+                </div>
+                <input
+                  class="mt-1 block w-full rounded-md border-gray-300 shadow-sm focus:border-indigo-500 focus:ring-indigo-500 sm:text-sm"
+                  id="step1-title"
+                  placeholder="e.g., Heat the oil"
+                  type="text"
+                  value="Sauté onions and garlic"
+                />
+                <label
+                  class="mt-2 block text-lg font-semibold text-gray-900"
+                  for="step1-desc"
+                  >Description</label
+                >
+                <textarea
+                  class="mt-1 block w-full rounded-md border-gray-300 shadow-sm focus:border-indigo-500 focus:ring-indigo-500 sm:text-sm"
+                  id="step1-desc"
+                  placeholder="Add description here..."
+                  rows="3"
+                >
+In a large skillet or pan, heat the olive oil over medium heat. Add the chopped onions and cook until they become translucent, about 5 minutes. Add the minced garlic and cook for another minute until fragrant.</textarea
+                >
+              </div>
+            </li>
+            <li class="flex items-start">
+              <div
+                class="flex-shrink-0 w-8 h-8 rounded-full bg-indigo-500 text-white flex items-center justify-center font-bold"
+              >
+                2
+              </div>
+              <div class="ml-4 flex-1">
+                <div class="flex justify-between items-center">
+                  <label
+                    class="text-lg font-semibold text-gray-900"
+                    for="step2-title"
+                    >Title</label
+                  >
+
+                  <button
+                    class="text-[#0e1a13] flex size-7 items-center justify-center"
+                    data-icon="Trash"
+                    data-size="24px"
+                    data-weight="regular"
+                  >
+                    <svg
+                      xmlns="http://www.w3.org/2000/svg"
+                      width="24px"
+                      height="24px"
+                      fill="currentColor"
+                      viewBox="0 0 256 256"
+                    >
+                      <path
+                        d="M216,48H176V40a24,24,0,0,0-24-24H104A24,24,0,0,0,80,40v8H40a8,8,0,0,0,0,16h8V208a16,16,0,0,0,16,16H192a16,16,0,0,0,16-16V64h8a8,8,0,0,0,0-16ZM96,40a8,8,0,0,1,8-8h48a8,8,0,0,1,8,8v8H96Zm96,168H64V64H192ZM112,104v64a8,8,0,0,1-16,0V104a8,8,0,0,1,16,0Zm48,0v64a8,8,0,0,1-16,0V104a8,8,0,0,1,16,0Z"
+                      ></path>
+                    </svg>
+                  </button>
+                </div>
+                <input
+                  class="mt-1 block w-full rounded-md border-gray-300 shadow-sm focus:border-indigo-500 focus:ring-indigo-500 sm:text-sm"
+                  id="step2-title"
+                  placeholder="e.g., Cook the vegetables"
+                  type="text"
+                  value="Add the vegetables"
+                />
+                <label
+                  class="mt-2 block text-lg font-semibold text-gray-900"
+                  for="step2-desc"
+                  >Description</label
+                >
+                <textarea
+                  class="mt-1 block w-full rounded-md border-gray-300 shadow-sm focus:border-indigo-500 focus:ring-indigo-500 sm:text-sm"
+                  id="step2-desc"
+                  placeholder="Add description here..."
+                  rows="3"
+                >
+Add the chopped carrots, bell peppers, and zucchini to the skillet. Cook for about 10-12 minutes, stirring occasionally, until the vegetables are tender-crisp.</textarea
+                >
+              </div>
+            </li>
+          </ul>
+          <div class="mt-6 flex justify-center">
+            <button
+              class="flex items-center justify-center w-12 h-12 rounded-full bg-indigo-100 text-indigo-600"
+            >
+              <span class="material-icons">add</span>
+            </button>
+          </div>
+        </div>
+      </main>
+      <div
+        class="fixed inset-x-0 bottom-0 bg-white p-4 border-t border-gray-200"
+      >
+        <div class="mx-auto">
+          <button
+            class="flex w-full cursor-pointer items-center justify-center overflow-hidden rounded-xl h-12 px-5 flex-1 bg-indigo-600 text-white text-base font-medium leading-normal tracking-[0.015em]"
+          >
+            <span class="truncate">Add Recipe</span>
+          </button>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>
